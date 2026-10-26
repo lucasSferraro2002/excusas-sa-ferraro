@@ -7,6 +7,6 @@ public class ModoProductivo implements ModoDesempeno {
     }
     @Override
     public void tomarDescanso(Empleado empleado) {
-        empleado.setModo(new ModoNormal()); // Si es productivo y descansa, baja a normal
+        empleado.setModo(new ModoNormal());
     }
 }

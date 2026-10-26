@@ -23,9 +23,9 @@ class SupervisoraAreaTest {
         assertTrue(excusa.isAceptada());
         verify(emailSenderMock).enviarEmail(
                 eq("EDESUR@mailfake.com.ar"),
-                anyString(), // Origen no especificado en consigna
-                anyString(), // Asunto no especificado
-                anyString()  // Cuerpo no especificado
+                anyString(),
+                anyString(),
+                anyString()
         );
     }
 }
