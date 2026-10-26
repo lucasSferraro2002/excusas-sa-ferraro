@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9d59b6c6-13b8-4dce-bb10-4b418def1c20" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/CEO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/GerenteHR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/Recepcionista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/Responsable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/SupervisoraArea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/Empleado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/Excusa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/Motivo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/service/AdministradorProntuarios.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/service/DirectivoObserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/service/EmailSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoDesempeno.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoNormal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoProductivo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoVago.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/CEOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/GerenteHRTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/RecepcionistaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/SupervisoraAreaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/excusas/model/EmpleadoStateTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/excusas/service/AdministradorProntuariosTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="3LDF0NKNUbR7fMyW3ShZs5gmXSl" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.AdministradorProntuariosTest.executor": "Run",
+    "JUnit.CEOTest.executor": "Run",
+    "JUnit.EmpleadoStateTest.empleadoPasaAModoProductivoAlTomarCafe.executor": "Run",
+    "JUnit.EmpleadoStateTest.empleadoPasaAModoVagoAlTomarDescanso.executor": "Run",
+    "JUnit.EmpleadoStateTest.executor": "Run",
+    "JUnit.GerenteHRTest.executor": "Run",
+    "JUnit.GerenteHRTest.gerenteAceptaExcusaIrrelevanteOCompleja.executor": "Run",
+    "JUnit.RecepcionistaTest.executor": "Run",
+    "JUnit.RecepcionistaTest.recepcionistaAceptaExcusaQuedarseDormidoYEnviaEmail.executor": "Run",
+    "JUnit.RecepcionistaTest.recepcionistaDerivaExcusaASiguienteResponsable.executor": "Run",
+    "JUnit.SupervisoraAreaTest.executor": "Run",
+    "JUnit.SupervisoraAreaTest.supervisoraAceptaCorteDeLuzYEnviaEmailAEdesur.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.excusas.chain" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.AdministradorProntuariosTest">
+    <configuration name="AdministradorProntuariosTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="excusas-sa-ferraro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.excusas.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.excusas.service" />
+      <option name="MAIN_CLASS_NAME" value="com.excusas.service.AdministradorProntuariosTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmpleadoStateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="excusas-sa-ferraro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.excusas.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.excusas.model" />
+      <option name="MAIN_CLASS_NAME" value="com.excusas.model.EmpleadoStateTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GerenteHRTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="excusas-sa-ferraro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.excusas.chain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.excusas.chain" />
+      <option name="MAIN_CLASS_NAME" value="com.excusas.chain.GerenteHRTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RecepcionistaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="excusas-sa-ferraro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.excusas.chain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.excusas.chain" />
+      <option name="MAIN_CLASS_NAME" value="com.excusas.chain.RecepcionistaTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SupervisoraAreaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="excusas-sa-ferraro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.excusas.chain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.excusas.chain" />
+      <option name="MAIN_CLASS_NAME" value="com.excusas.chain.SupervisoraAreaTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AdministradorProntuariosTest" />
+        <item itemvalue="JUnit.EmpleadoStateTest" />
+        <item itemvalue="JUnit.SupervisoraAreaTest" />
+        <item itemvalue="JUnit.RecepcionistaTest" />
+        <item itemvalue="JUnit.GerenteHRTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.26222.65" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9d59b6c6-13b8-4dce-bb10-4b418def1c20" name="Changes" comment="" />
+      <created>1792980509221</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1792980509221</updated>
+      <workItem from="1792980512020" duration="3512000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
