@@ -8,4 +8,7 @@ public class ExcusaInverosimil extends Excusa {
 
     @Override
     protected Set<Motivo> motivosValidos() { return EnumSet.of(Motivo.INVEROSIMIL); }
+
+    @Override
+    public NivelExcusa getNivel() { return NivelExcusa.INVEROSIMIL; }
 }

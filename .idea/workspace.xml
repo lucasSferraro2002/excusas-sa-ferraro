@@ -8,25 +8,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/chain/CEO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/CEO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/chain/CadenaBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/CadenaBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/chain/Encargado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/Encargado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/chain/GerenteHR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/GerenteHR.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/chain/Recepcionista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/Recepcionista.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/chain/SupervisoraArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/SupervisoraArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/Empleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/EmpleadoComun.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/Excusa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/Excusa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/service/AdministradorProntuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/service/AdministradorProntuarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/service/DirectivoObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/service/DirectivoObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/state/Estado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/Estado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoNormal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoProductivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoProductivo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoVago.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoVago.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/excusas/chain/CadenaBuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/CadenaBuilderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/excusas/chain/GerenteYCEOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/GerenteYCEOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/excusas/chain/RecepcionistaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/RecepcionistaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/excusas/chain/SupervisoraAreaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/SupervisoraAreaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/excusas/model/EstadoEmpleadoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/excusas/model/EstadoEmpleadoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/excusas/service/AdministradorProntuariosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/excusas/service/AdministradorProntuariosTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/ExcusaCompleja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/ExcusaCompleja.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/ExcusaInverosimil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/ExcusaInverosimil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/ExcusaModerada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/ExcusaModerada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/ExcusaTrivial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/ExcusaTrivial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/excusas/CadenaExcusasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/excusas/CadenaExcusasTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +166,7 @@
       <recent name="com.excusas.chain" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.All in excusas-sa-ferraro">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.excusas.Main" />
       <module name="excusas-sa-ferraro" />
@@ -185,6 +176,14 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in excusas-sa-ferraro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="excusas-sa-ferraro" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -200,22 +199,6 @@
       <option name="PACKAGE_NAME" value="com.excusas.model" />
       <option name="MAIN_CLASS_NAME" value="com.excusas.model.EmpleadoStateTest" />
       <option name="METHOD_NAME" value="empleadoProductivoSeMantieneProductivoSiTomaMasCafe" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EmpleadoStateTest.empleadoVagoSubeANormalAlTomarCafe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="excusas-sa-ferraro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.excusas.state.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.excusas.model" />
-      <option name="MAIN_CLASS_NAME" value="com.excusas.model.EmpleadoStateTest" />
-      <option name="METHOD_NAME" value="empleadoVagoSubeANormalAlTomarCafe" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -252,11 +235,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in excusas-sa-ferraro" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.com.excusas in excusas-sa-ferraro" />
         <item itemvalue="JUnit.ReglasDeNegocioTest" />
         <item itemvalue="JUnit.EmpleadoStateTest.empleadoProductivoSeMantieneProductivoSiTomaMasCafe" />
-        <item itemvalue="JUnit.EmpleadoStateTest.empleadoVagoSubeANormalAlTomarCafe" />
       </list>
     </recent_temporary>
   </component>
@@ -277,6 +260,7 @@
       <workItem from="1792980512020" duration="4364000" />
       <workItem from="1793458831856" duration="10246000" />
       <workItem from="1793503968980" duration="7652000" />
+      <workItem from="1793544250398" duration="688000" />
     </task>
     <servers />
   </component>

@@ -20,6 +20,8 @@ public abstract class Excusa {
 
     protected abstract Set<Motivo> motivosValidos();
 
+    public abstract NivelExcusa getNivel();
+
     public void aceptar() { this.aceptada = true; }
     public void rechazarPorFaltaDePruebas() { this.aceptada = false; this.respuestaFinal = MENSAJE_RECHAZO; }
 

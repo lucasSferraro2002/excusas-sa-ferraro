@@ -8,4 +8,7 @@ public class ExcusaTrivial extends Excusa {
 
     @Override
     protected Set<Motivo> motivosValidos() { return EnumSet.of(Motivo.QUEDARSE_DORMIDO, Motivo.PERDER_TRANSPORTE); }
+
+    @Override
+    public NivelExcusa getNivel() { return NivelExcusa.TRIVIAL; }
 }

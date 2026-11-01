@@ -69,7 +69,9 @@ public class Main {
                 .agregarResponsable(ceo)
                 .construir();
 
-        JPanel panelEstado = new JPanel(new FlowLayout());
+        JPanel panelEstado = new JPanel(new GridLayout(2, 1));
+        JPanel filaEncargado = new JPanel(new FlowLayout());
+        JPanel filaAcciones = new JPanel(new FlowLayout());
         JComboBox<Encargado> comboEncargados = new JComboBox<>(encargados.toArray(new Encargado[0]));
         JSpinner spnMinutos = new JSpinner(new SpinnerNumberModel(12, 0, 120, 1));
 
@@ -78,13 +80,15 @@ public class Main {
         JButton btnDescanso = new JButton("Dar Break (min)");
         JButton btnDiaSiguiente = new JButton("Pasar de Día");
 
-        panelEstado.add(new JLabel("Seleccionar encargado:"));
-        panelEstado.add(comboEncargados);
-        panelEstado.add(btnTomarCafe);
-        panelEstado.add(spnMinutos);
-        panelEstado.add(btnDescanso);
-        panelEstado.add(btnDiaSiguiente);
-        panelEstado.add(btnVerEstados);
+        filaEncargado.add(new JLabel("Seleccionar encargado:"));
+        filaEncargado.add(comboEncargados);
+        filaEncargado.add(btnTomarCafe);
+        filaEncargado.add(spnMinutos);
+        filaEncargado.add(btnDescanso);
+        filaAcciones.add(btnDiaSiguiente);
+        filaAcciones.add(btnVerEstados);
+        panelEstado.add(filaEncargado);
+        panelEstado.add(filaAcciones);
         frame.add(panelEstado, BorderLayout.SOUTH);
 
         btnProcesar.addActionListener(e -> {

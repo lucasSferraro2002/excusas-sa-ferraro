@@ -2,6 +2,7 @@ package com.excusas.chain;
 
 import com.excusas.model.Empleado;
 import com.excusas.model.Excusa;
+import com.excusas.model.NivelExcusa;
 import com.excusas.service.EmailSender;
 import com.excusas.state.Estado;
 import com.excusas.state.PoliticaDeModo;
@@ -67,6 +68,10 @@ public abstract class Encargado extends Empleado implements EslabonDeCadena {
     private void aplicarCantidad(int cantidad) {
         this.cantidadExcusas = cantidad;
         this.modo = politica.modoPara(cantidad);
+    }
+
+    protected boolean esDeNivelHasta(Excusa excusa, NivelExcusa maximo) {
+        return excusa.getNivel().compareTo(maximo) <= 0;
     }
 
     protected abstract boolean puedeProcesar(Excusa excusa);

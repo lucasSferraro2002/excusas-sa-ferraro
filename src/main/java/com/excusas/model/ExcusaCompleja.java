@@ -8,4 +8,7 @@ public class ExcusaCompleja extends Excusa {
 
     @Override
     protected Set<Motivo> motivosValidos() { return EnumSet.of(Motivo.IRRELEVANTE); }
+
+    @Override
+    public NivelExcusa getNivel() { return NivelExcusa.COMPLEJA; }
 }

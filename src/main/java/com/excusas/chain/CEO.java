@@ -1,10 +1,11 @@
 package com.excusas.chain;
 
 import com.excusas.model.Excusa;
-import com.excusas.model.ExcusaInverosimil;
+import com.excusas.model.NivelExcusa;
 import com.excusas.service.EmailSender;
 import com.excusas.service.RegistroDeProntuarios;
 
+/** Solo escucha excusas inverosímiles (no toma las de niveles inferiores). */
 public class CEO extends Encargado {
     private static final String ASUNTO = "Resolución final";
     private static final String CUERPO = "Aprobado por creatividad";
@@ -17,7 +18,7 @@ public class CEO extends Encargado {
     }
 
     @Override
-    protected boolean puedeProcesar(Excusa excusa) { return excusa instanceof ExcusaInverosimil; }
+    protected boolean puedeProcesar(Excusa excusa) { return excusa.getNivel() == NivelExcusa.INVEROSIMIL; }
 
     @Override
     protected void procesarExcusaEspecifica(Excusa excusa) {

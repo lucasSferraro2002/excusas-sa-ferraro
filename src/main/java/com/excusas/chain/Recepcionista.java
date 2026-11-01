@@ -1,7 +1,7 @@
 package com.excusas.chain;
 
 import com.excusas.model.Excusa;
-import com.excusas.model.ExcusaTrivial;
+import com.excusas.model.NivelExcusa;
 import com.excusas.service.EmailSender;
 
 public class Recepcionista extends Encargado {
@@ -13,7 +13,7 @@ public class Recepcionista extends Encargado {
     }
 
     @Override
-    protected boolean puedeProcesar(Excusa excusa) { return excusa instanceof ExcusaTrivial; }
+    protected boolean puedeProcesar(Excusa excusa) { return esDeNivelHasta(excusa, NivelExcusa.TRIVIAL); }
 
     @Override
     protected void procesarExcusaEspecifica(Excusa excusa) {

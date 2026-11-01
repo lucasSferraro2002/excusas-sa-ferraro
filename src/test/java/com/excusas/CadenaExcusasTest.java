@@ -151,4 +151,50 @@ class CadenaExcusasTest {
         verify(sender).enviarEmail(eq("juan@excusas.com"), eq("beto@x.com"), eq("motivo demora"), anyString());
         verifyNoMoreInteractions(sender);
     }
+
+    @Test
+    void supervisoraAceptaUnaExcusaTrivialSiLaRecepcionistaEstaVaga() {
+        Recepcionista vaga = new Recepcionista("Ana", "ana@x.com", 1, sender);
+        vaga.setModo(new ModoVago());
+        Responsable cadena = new CadenaBuilder()
+                .agregarResponsable(vaga)
+                .agregarResponsable(new SupervisoraArea("Laura", "laura@x.com", 2, sender))
+                .construir();
+        Excusa excusa = Motivo.QUEDARSE_DORMIDO.nuevaExcusa(empleado);
+
+        cadena.revisarExcusa(excusa);
+
+        assertTrue(excusa.isAceptada());
+        verifyNoInteractions(sender);
+    }
+
+    @Test
+    void gerenteAceptaUnaExcusaModerada() {
+        Excusa excusa = Motivo.PERDIDA_SUMINISTRO.nuevaExcusa(empleado);
+
+        new GerenteHR("Carlos", "carlos@x.com", 3, sender).revisarExcusa(excusa);
+
+        assertTrue(excusa.isAceptada());
+        verifyNoInteractions(sender);
+    }
+
+    @Test
+    void unEncargadoNoAceptaExcusasDeNivelSuperior() {
+        Excusa excusa = Motivo.CUIDADO_FAMILIAR.nuevaExcusa(empleado);
+
+        new Recepcionista("Ana", "ana@x.com", 1, sender).revisarExcusa(excusa);
+
+        assertFalse(excusa.isAceptada());
+        assertEquals(Excusa.MENSAJE_RECHAZO, excusa.getRespuestaFinal());
+    }
+
+    @Test
+    void ceoSoloAceptaInverosimiles() {
+        Excusa excusa = Motivo.IRRELEVANTE.nuevaExcusa(empleado);
+
+        new CEO("Roberto", "ceo@x.com", 4, sender, registro).revisarExcusa(excusa);
+
+        assertFalse(excusa.isAceptada());
+        verify(registro, never()).registrarProntuario(any());
+    }
 }
