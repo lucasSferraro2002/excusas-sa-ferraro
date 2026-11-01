@@ -1,51 +1,48 @@
 package com.excusas.chain;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import com.excusas.model.Empleado;
-import com.excusas.model.Excusa;
-import com.excusas.model.Motivo;
-import com.excusas.service.EmailSender;
-import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import com.excusas.model.Empleado;
+import com.excusas.model.EmpleadoComun;
+import com.excusas.model.Excusa;
+import com.excusas.model.NivelComplejidad;
+import com.excusas.service.EmailSender;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
+
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 class RecepcionistaTest {
 
-    @Test
-    void recepcionistaAceptaExcusaQuedarseDormidoYEnviaEmail() {
-        EmailSender emailSenderMock = mock(EmailSender.class);
-        Recepcionista recepcionista = new Recepcionista("Ana", "ana@excusas.com", 101, emailSenderMock);
-        Empleado empleado = new Empleado("Juan", "juan@excusas.com", 501);
-        Excusa excusa = new Excusa(empleado, Motivo.QUEDARSE_DORMIDO);
+    private EmailSender emailSenderMock;
+    private Recepcionista recepcionista;
+    private Empleado empleado;
 
-        recepcionista.revisarExcusa(excusa);
-
-        assertTrue(excusa.isAceptada());
-        verify(emailSenderMock).enviarEmail(
-                eq("juan@excusas.com"),
-                anyString(),
-                eq("motivo demora"),
-                eq("la licencia fue aceptada")
-        );
+    @BeforeEach
+    void setUp() {
+        emailSenderMock = mock(EmailSender.class);
+        recepcionista = new Recepcionista("Ana", "ana@excusas.com", 101, emailSenderMock);
+        empleado = new EmpleadoComun("Juan", "juan@test.com", 1);
     }
+
     @Test
-    void recepcionistaDerivaExcusaASiguienteResponsable() {
+    void procesaExcusaTrivialYEnviaEmail() {
+        Excusa excusa = new Excusa(empleado, NivelComplejidad.TRIVIAL, "Me quede dormido");
 
-        EmailSender emailSenderMock = mock(EmailSender.class);
-        Recepcionista recepcionista = new Recepcionista("Ana", "ana@excusas.com", 101, emailSenderMock);
+        boolean resultado = recepcionista.intentarProcesar(excusa);
 
+        assertTrue(resultado);
+        assertTrue(excusa.isAceptada());
+        verify(emailSenderMock, times(1)).enviarEmail("juan@test.com", "ana@excusas.com", "motivo demora", "la licencia fue aceptada");
+    }
 
-        Responsable siguienteMock = mock(Responsable.class);
-        recepcionista.setSiguiente(siguienteMock);
+    @Test
+    void rechazaExcusaNoTrivial() {
+        Excusa excusa = new Excusa(empleado, NivelComplejidad.MODERADA, "Problema familiar");
 
-        Empleado empleado = new Empleado("Juan", "juan@excusas.com", 501);
+        boolean resultado = recepcionista.intentarProcesar(excusa);
 
-        Excusa excusa = new Excusa(empleado, Motivo.PERDIDA_SUMINISTRO);
-
-        recepcionista.revisarExcusa(excusa);
-
-        assertFalse(excusa.isAceptada());
-
-        verify(siguienteMock).revisarExcusa(excusa);
+        assertFalse(resultado);
+        verify(emailSenderMock, never()).enviarEmail(anyString(), anyString(), anyString(), anyString());
     }
 }

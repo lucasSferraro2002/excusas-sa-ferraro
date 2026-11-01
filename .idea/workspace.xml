@@ -5,32 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d59b6c6-13b8-4dce-bb10-4b418def1c20" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/CEO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/GerenteHR.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/Recepcionista.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/Responsable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/SupervisoraArea.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/Empleado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/Excusa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/Motivo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/service/AdministradorProntuarios.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/service/DirectivoObserver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/service/EmailSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoDesempeno.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoNormal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoProductivo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoVago.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/CEOTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/GerenteHRTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/RecepcionistaTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/SupervisoraAreaTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/excusas/model/EmpleadoStateTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/excusas/service/AdministradorProntuariosTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/CadenaBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/EmpleadoComun.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/NivelComplejidad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/Estado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/CadenaBuilderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/ReglasDeNegocioTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/excusas/model/EstadoEmpleadoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/chain/CEO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/CEO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/chain/GerenteHR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/GerenteHR.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/chain/Recepcionista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/Recepcionista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/chain/SupervisoraArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/SupervisoraArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/Empleado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/Excusa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/Excusa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/Motivo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/service/AdministradorProntuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/service/AdministradorProntuarios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoDesempeno.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoNormal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoProductivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoProductivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoVago.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoVago.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/excusas/chain/CEOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/GerenteYCEOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/excusas/chain/GerenteHRTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/excusas/chain/RecepcionistaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/RecepcionistaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/excusas/chain/SupervisoraAreaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/SupervisoraAreaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/excusas/model/EmpleadoStateTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/excusas/service/AdministradorProntuariosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/excusas/service/AdministradorProntuariosTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,15 +55,77 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.jdks/ms-21.0.8/lib/src.zip!/java.desktop/javax/swing/text/JTextComponent.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0000000000083782" />
+      <entry key="S10" value="1.000005108846402" />
+      <entry key="S30" value="1.0458668136106473" />
+      <entry key="S60" value="1.4732266994991345" />
+      <entry key="M2" value="2.6138839085291363" />
+      <entry key="M5" value="5.189741754579255" />
+      <entry key="M10" value="7.4849989159569645" />
+      <entry key="M15" value="8.653664190621168" />
+      <entry key="M30" value="10.284748685303269" />
+      <entry key="H1" value="12.37823534442959" />
+      <entry key="H2" value="15.53505879537538" />
+      <entry key="H4" value="18.703721509648652" />
+      <entry key="D1" value="22.914392526431023" />
+      <entry key="W1" value="23.83901175289109" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="2.716160193628449E-6" />
+      <entry key="MS500" value="0.0770532703414879" />
+      <entry key="S2" value="0.5268630831697736" />
+      <entry key="S5" value="0.773889773245117" />
+      <entry key="S10" value="0.8797146313546612" />
+      <entry key="S30" value="1.0019989226948762" />
+      <entry key="S60" value="1.4408582949038462" />
+      <entry key="M2" value="2.5844773585618994" />
+      <entry key="M5" value="5.169920688292294" />
+      <entry key="M10" value="7.472939281653188" />
+      <entry key="M15" value="8.645059879581037" />
+      <entry key="M30" value="10.28005084802149" />
+      <entry key="H1" value="12.375470835253493" />
+      <entry key="H2" value="15.533297795094294" />
+      <entry key="H4" value="18.7026444097612" />
+      <entry key="D1" value="22.91416922438947" />
+      <entry key="W1" value="23.838978479471848" />
+    </decayedShown>
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="3LDF0NKNUbR7fMyW3ShZs5gmXSl" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -68,76 +134,102 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.AdministradorProntuariosTest.executor": "Run",
-    "JUnit.CEOTest.executor": "Run",
-    "JUnit.EmpleadoStateTest.empleadoPasaAModoProductivoAlTomarCafe.executor": "Run",
-    "JUnit.EmpleadoStateTest.empleadoPasaAModoVagoAlTomarDescanso.executor": "Run",
-    "JUnit.EmpleadoStateTest.executor": "Run",
-    "JUnit.GerenteHRTest.executor": "Run",
-    "JUnit.GerenteHRTest.gerenteAceptaExcusaIrrelevanteOCompleja.executor": "Run",
-    "JUnit.RecepcionistaTest.executor": "Run",
-    "JUnit.RecepcionistaTest.recepcionistaAceptaExcusaQuedarseDormidoYEnviaEmail.executor": "Run",
-    "JUnit.RecepcionistaTest.recepcionistaDerivaExcusaASiguienteResponsable.executor": "Run",
-    "JUnit.SupervisoraAreaTest.executor": "Run",
-    "JUnit.SupervisoraAreaTest.supervisoraAceptaCorteDeLuzYEnviaEmailAEdesur.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AdministradorProntuariosTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CEOTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EmpleadoStateTest.empleadoPasaAModoProductivoAlTomarCafe.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EmpleadoStateTest.empleadoPasaAModoVagoAlTomarDescanso.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EmpleadoStateTest.empleadoProductivoBajaANormalAlTomarDescanso.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EmpleadoStateTest.empleadoProductivoSeMantieneProductivoSiTomaMasCafe.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EmpleadoStateTest.empleadoVagoSubeANormalAlTomarCafe.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EmpleadoStateTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GerenteHRTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GerenteHRTest.gerenteAceptaExcusaIrrelevanteOCompleja.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RecepcionistaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RecepcionistaTest.recepcionistaAceptaExcusaQuedarseDormidoYEnviaEmail.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RecepcionistaTest.recepcionistaDerivaExcusaASiguienteResponsable.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReglasDeNegocioTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SupervisoraAreaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SupervisoraAreaTest.supervisoraAceptaCorteDeLuzYEnviaEmailAEdesur.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.com.excusas in excusas-sa-ferraro.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.excusas.chain" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AdministradorProntuariosTest">
-    <configuration name="AdministradorProntuariosTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.excusas.Main" />
       <module name="excusas-sa-ferraro" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.excusas.service.*" />
+          <option name="PATTERN" value="com.excusas.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.excusas.service" />
-      <option name="MAIN_CLASS_NAME" value="com.excusas.service.AdministradorProntuariosTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmpleadoStateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmpleadoStateTest.empleadoProductivoSeMantieneProductivoSiTomaMasCafe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="excusas-sa-ferraro" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.excusas.model.*" />
+          <option name="PATTERN" value="com.excusas.state.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.excusas.model" />
       <option name="MAIN_CLASS_NAME" value="com.excusas.model.EmpleadoStateTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="empleadoProductivoSeMantieneProductivoSiTomaMasCafe" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GerenteHRTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmpleadoStateTest.empleadoVagoSubeANormalAlTomarCafe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="excusas-sa-ferraro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.excusas.state.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.excusas.model" />
+      <option name="MAIN_CLASS_NAME" value="com.excusas.model.EmpleadoStateTest" />
+      <option name="METHOD_NAME" value="empleadoVagoSubeANormalAlTomarCafe" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReglasDeNegocioTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="excusas-sa-ferraro" />
       <extension name="coverage">
         <pattern>
@@ -146,49 +238,33 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.excusas.chain" />
-      <option name="MAIN_CLASS_NAME" value="com.excusas.chain.GerenteHRTest" />
+      <option name="MAIN_CLASS_NAME" value="com.excusas.chain.ReglasDeNegocioTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RecepcionistaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="com.excusas in excusas-sa-ferraro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="excusas-sa-ferraro" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.excusas.chain.*" />
+          <option name="PATTERN" value="com.excusas.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.excusas.chain" />
-      <option name="MAIN_CLASS_NAME" value="com.excusas.chain.RecepcionistaTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SupervisoraAreaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="excusas-sa-ferraro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.excusas.chain.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.excusas.chain" />
-      <option name="MAIN_CLASS_NAME" value="com.excusas.chain.SupervisoraAreaTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.excusas" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AdministradorProntuariosTest" />
-        <item itemvalue="JUnit.EmpleadoStateTest" />
-        <item itemvalue="JUnit.SupervisoraAreaTest" />
-        <item itemvalue="JUnit.RecepcionistaTest" />
-        <item itemvalue="JUnit.GerenteHRTest" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.com.excusas in excusas-sa-ferraro" />
+        <item itemvalue="JUnit.ReglasDeNegocioTest" />
+        <item itemvalue="JUnit.EmpleadoStateTest.empleadoProductivoSeMantieneProductivoSiTomaMasCafe" />
+        <item itemvalue="JUnit.EmpleadoStateTest.empleadoVagoSubeANormalAlTomarCafe" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +282,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1792980509221</updated>
-      <workItem from="1792980512020" duration="3512000" />
+      <workItem from="1792980512020" duration="4364000" />
+      <workItem from="1793458831856" duration="10246000" />
+      <workItem from="1793503968980" duration="5508000" />
     </task>
     <servers />
   </component>

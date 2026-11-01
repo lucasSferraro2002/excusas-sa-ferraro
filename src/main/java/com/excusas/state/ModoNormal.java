@@ -1,14 +1,18 @@
 package com.excusas.state;
-import com.excusas.model.Empleado;
 
-public class ModoNormal implements ModoDesempeno {
+import com.excusas.model.Empleado;
+import com.excusas.model.Excusa;
+
+public class ModoNormal implements Estado {
     @Override
-    public void tomarCafe(Empleado empleado) {
-        // Al tomar café estando normal, pasa a productivo
-        empleado.setModo(new ModoProductivo());
+    public void manejarExcusa(Empleado empleado, Excusa excusa) {
+        if (!empleado.intentarProcesar(excusa)) {
+            if (empleado.getSiguiente() != null) {
+                empleado.getSiguiente().revisarExcusa(excusa);
+            } else {
+                excusa.setRespuestaFinal("Excusa rechazada: necesitamos pruebas contundentes");
+            }
+        }
     }
-    @Override
-    public void tomarDescanso(Empleado empleado) {
-        empleado.setModo(new ModoVago());
-    }
+
 }

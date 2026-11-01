@@ -36,4 +36,8 @@ public class AdministradorProntuarios {
             obs.actualizar(excusa);
         }
     }
+
+    public List<DirectivoObserver> getObservadores() {
+        return observadores;
+    }
 }

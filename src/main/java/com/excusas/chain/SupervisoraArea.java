@@ -2,42 +2,28 @@ package com.excusas.chain;
 
 import com.excusas.model.Empleado;
 import com.excusas.model.Excusa;
-import com.excusas.model.Motivo;
+import com.excusas.model.NivelComplejidad;
 import com.excusas.service.EmailSender;
 
-public class SupervisoraArea extends Empleado implements Responsable {
-    private EmailSender emailSender;
-    private Responsable siguiente;
-
+public class SupervisoraArea extends Empleado {
     public SupervisoraArea(String nombre, String email, int legajo, EmailSender emailSender) {
-        super(nombre, email, legajo);
-        this.emailSender = emailSender;
-    }
-
-    public void setSiguiente(Responsable siguiente) {
-        this.siguiente = siguiente;
+        super(nombre, email, legajo, emailSender);
     }
 
     @Override
-    public void revisarExcusa(Excusa excusa) {
-        if (excusa.getMotivo() == Motivo.PERDIDA_SUMINISTRO) {
-            excusa.setAceptada(true);
-            emailSender.enviarEmail(
-                    "EDESUR@mailfake.com.ar",
-                    this.getEmail(),
-                    "Consulta corte de suministro",
-                    "¿Es verdad que hubo corte de luz?"
-            );
-        } else if (excusa.getMotivo() == Motivo.CUIDADO_FAMILIAR) {
-            excusa.setAceptada(true);
-            emailSender.enviarEmail(
-                    excusa.getEmpleado().getEmail(),
-                    this.getEmail(),
-                    "Consulta personal",
-                    "¿Está todo bien?"
-            );
-        } else if (siguiente != null) {
-            siguiente.revisarExcusa(excusa);
+    protected NivelComplejidad getNivelAsignado() { return NivelComplejidad.MODERADA; }
+
+    @Override
+    protected void procesarExcusaEspecifica(Excusa excusa) {
+        excusa.setAceptada(true);
+        String texto = excusa.getDescripcion().toLowerCase();
+
+        if (texto.contains("corto la luz")) {
+            getEmailSender().enviarEmail("EDESUR@mailfake.com.ar", getEmail(), "Verificación de servicio", "¿Me confirman si hubo un corte de luz en el barrio del empleado?");
+        } else if (texto.contains("cuidar a un familiar")) {
+            getEmailSender().enviarEmail(excusa.getEmpleado().getEmail(), getEmail(), "Consulta personal", "¿Está todo bien con tu familiar?");
+        } else {
+            getEmailSender().enviarEmail(excusa.getEmpleado().getEmail(), getEmail(), "Excusa moderada", "Tu excusa ha sido evaluada y aceptada.");
         }
     }
 }

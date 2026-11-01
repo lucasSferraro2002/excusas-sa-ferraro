@@ -1,12 +1,22 @@
 package com.excusas.state;
-import com.excusas.model.Empleado;
 
-public class ModoProductivo implements ModoDesempeno {
+import com.excusas.model.Empleado;
+import com.excusas.model.Excusa;
+
+public class ModoProductivo implements Estado {
+
     @Override
-    public void tomarCafe(Empleado empleado) {
-    }
-    @Override
-    public void tomarDescanso(Empleado empleado) {
-        empleado.setModo(new ModoNormal()); // Si es productivo y descansa, baja a normal
+    public void manejarExcusa(Empleado empleado, Excusa excusa) {
+        if (!empleado.intentarProcesar(excusa)) {
+            if (empleado.getSiguiente() != null) {
+                empleado.getEmailSender().enviarEmail(
+                        "CTO@excusas.com",
+                        empleado.getEmail(),
+                        "Derivacion de excusa",
+                        "Se deriva la excusa al siguiente sector."
+                );
+                empleado.getSiguiente().revisarExcusa(excusa);
+            }
+        }
     }
 }
