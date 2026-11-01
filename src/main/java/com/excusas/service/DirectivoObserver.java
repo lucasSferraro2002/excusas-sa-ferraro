@@ -1,7 +1,7 @@
 package com.excusas.service;
 
-import com.excusas.model.Excusa;
+import com.excusas.model.Prontuario;
 
 public interface DirectivoObserver {
-    void actualizar(Excusa excusa);
+    void actualizar(Prontuario prontuario);
 }

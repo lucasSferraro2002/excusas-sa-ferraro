@@ -1,7 +1,6 @@
 package com.excusas.chain;
 
 import com.excusas.model.Empleado;
-import com.excusas.model.EmpleadoComun;
 import com.excusas.model.Excusa;
 import com.excusas.model.NivelComplejidad;
 import com.excusas.service.EmailSender;

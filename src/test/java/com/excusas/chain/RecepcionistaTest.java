@@ -1,13 +1,11 @@
 package com.excusas.chain;
 
 import com.excusas.model.Empleado;
-import com.excusas.model.EmpleadoComun;
 import com.excusas.model.Excusa;
 import com.excusas.model.NivelComplejidad;
 import com.excusas.service.EmailSender;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;

@@ -1,7 +1,6 @@
 package com.excusas.service;
 
 import com.excusas.model.Empleado;
-import com.excusas.model.EmpleadoComun;
 import com.excusas.model.Excusa;
 import com.excusas.model.NivelComplejidad;
 import org.junit.jupiter.api.BeforeEach;

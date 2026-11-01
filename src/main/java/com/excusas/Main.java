@@ -3,14 +3,18 @@ package com.excusas;
 import com.excusas.chain.*;
 import com.excusas.model.*;
 import com.excusas.service.*;
-import com.excusas.state.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> crearInterfaz());
+    }
+
+    private static String nombreModo(Encargado encargado) {
+        return encargado.getModo().getClass().getSimpleName();
     }
 
     private static void crearInterfaz() {
@@ -19,7 +23,7 @@ public class Main {
         frame.setSize(750, 750);
         frame.setLayout(new BorderLayout());
 
-        JPanel panelFormulario = new JPanel(new GridLayout(6, 2, 10, 10));
+        JPanel panelFormulario = new JPanel(new GridLayout(4, 2, 10, 10));
         panelFormulario.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         panelFormulario.add(new JLabel("Nombre del empleado:"));
@@ -30,42 +34,9 @@ public class Main {
         JTextField txtLegajo = new JTextField();
         panelFormulario.add(txtLegajo);
 
-        panelFormulario.add(new JLabel("Nivel de complejidad:"));
-        JComboBox<NivelComplejidad> comboNivel = new JComboBox<>(NivelComplejidad.values());
-        panelFormulario.add(comboNivel);
-
-        panelFormulario.add(new JLabel("Seleccionar Excusa:"));
-        JComboBox<String> comboTextoExcusa = new JComboBox<>();
-        panelFormulario.add(comboTextoExcusa);
-
-        panelFormulario.add(new JLabel("Escribir otra excusa:"));
-        JTextField txtDescripcion = new JTextField();
-        txtDescripcion.setEnabled(false);
-        panelFormulario.add(txtDescripcion);
-
-        comboNivel.addActionListener(e -> {
-            NivelComplejidad nivel = (NivelComplejidad) comboNivel.getSelectedItem();
-            comboTextoExcusa.removeAllItems();
-
-            if (nivel.ordinal() == 0) {
-                comboTextoExcusa.addItem("Me quede dormido");
-                comboTextoExcusa.addItem("Perdi el colectivo");
-            } else if (nivel.ordinal() == 1) {
-                comboTextoExcusa.addItem("Se corto la luz en todo el barrio");
-                comboTextoExcusa.addItem("Tuve que cuidar a un familiar");
-            }
-            comboTextoExcusa.addItem("Otro");
-        });
-
-        comboTextoExcusa.addActionListener(e -> {
-            boolean esOtro = "Otro".equals(comboTextoExcusa.getSelectedItem());
-            txtDescripcion.setEnabled(esOtro);
-            if (!esOtro) {
-                txtDescripcion.setText("");
-            }
-        });
-
-        comboNivel.setSelectedIndex(0);
+        panelFormulario.add(new JLabel("Motivo:"));
+        JComboBox<Motivo> comboMotivo = new JComboBox<>(Motivo.values());
+        panelFormulario.add(comboMotivo);
 
         JButton btnProcesar = new JButton("Procesar Excusa");
         panelFormulario.add(new JLabel());
@@ -75,41 +46,42 @@ public class Main {
 
         JTextArea txtConsola = new JTextArea();
         txtConsola.setEditable(false);
-        JScrollPane scrollPane = new JScrollPane(txtConsola);
-        frame.add(scrollPane, BorderLayout.CENTER);
+        frame.add(new JScrollPane(txtConsola), BorderLayout.CENTER);
 
         EmailSender emailSender = (destinatario, remitente, asunto, cuerpo) -> {
             txtConsola.append("\n[EMAIL] De: " + remitente + " | Para: " + destinatario + "\n");
             txtConsola.append("        Asunto: " + asunto + " | Msj: " + cuerpo + "\n");
         };
 
+        AdministradorProntuarios administrador = AdministradorProntuarios.getInstance();
+        administrador.agregarObservador(new EquipoDeDireccion(emailSender));
+
         Recepcionista recepcionista = new Recepcionista("Ana", "Recepcionista@excusas.com", 101, emailSender);
         SupervisoraArea supervisora = new SupervisoraArea("Laura", "Supervisora@excusas.com", 102, emailSender);
         GerenteHR gerente = new GerenteHR("Carlos", "Gerente@excusas.com", 103, emailSender);
-        CEO ceo = new CEO("Roberto", "CEO@excusas.com", 1, emailSender);
+        CEO ceo = new CEO("Roberto", "CEO@excusas.com", 1, emailSender, administrador);
+        List<Encargado> encargados = List.of(recepcionista, supervisora, gerente, ceo);
 
-        Empleado cadenaDeResponsabilidad = new CadenaBuilder()
+        Responsable cadena = new CadenaBuilder()
                 .agregarResponsable(recepcionista)
                 .agregarResponsable(supervisora)
                 .agregarResponsable(gerente)
                 .agregarResponsable(ceo)
                 .construir();
 
-        AdministradorProntuarios.getInstance().agregarObservador(excusa -> {
-            txtConsola.append("\n[ALERTA A DIRECTORIO] Prontuario registrado. Legajo: " + excusa.getEmpleado().getLegajo() + "\n");
-        });
-
         JPanel panelEstado = new JPanel(new FlowLayout());
-        JComboBox<Empleado> comboEmpleados = new JComboBox<>(new Empleado[]{recepcionista, supervisora, gerente, ceo});
+        JComboBox<Encargado> comboEncargados = new JComboBox<>(encargados.toArray(new Encargado[0]));
+        JSpinner spnMinutos = new JSpinner(new SpinnerNumberModel(12, 0, 120, 1));
 
         JButton btnVerEstados = new JButton("Ver Estados");
         JButton btnTomarCafe = new JButton("Dar Café");
-        JButton btnDescanso = new JButton("Dar Break (12m)");
+        JButton btnDescanso = new JButton("Dar Break (min)");
         JButton btnDiaSiguiente = new JButton("Pasar de Día");
 
         panelEstado.add(new JLabel("Seleccionar encargado:"));
-        panelEstado.add(comboEmpleados);
+        panelEstado.add(comboEncargados);
         panelEstado.add(btnTomarCafe);
+        panelEstado.add(spnMinutos);
         panelEstado.add(btnDescanso);
         panelEstado.add(btnDiaSiguiente);
         panelEstado.add(btnVerEstados);
@@ -119,18 +91,15 @@ public class Main {
             try {
                 String nombre = txtNombre.getText();
                 int legajo = Integer.parseInt(txtLegajo.getText());
-                String descripcion = txtDescripcion.isEnabled() ? txtDescripcion.getText() : (String) comboTextoExcusa.getSelectedItem();
-                Empleado empleado = new EmpleadoComun(nombre, nombre.toLowerCase() + "@excusas.com", legajo);
-                NivelComplejidad nivel = (NivelComplejidad) comboNivel.getSelectedItem();
+                Motivo motivo = (Motivo) comboMotivo.getSelectedItem();
+                Empleado empleado = new Empleado(nombre, nombre.toLowerCase() + "@excusas.com", legajo);
+                Excusa excusa = motivo.nuevaExcusa(empleado);
 
-                Excusa excusa = new Excusa(empleado, nivel, descripcion);
+                txtConsola.append("\n--- Procesando excusa de " + nombre + " (" + motivo + ") ---");
+                cadena.revisarExcusa(excusa);
 
-                txtConsola.append("\n--- Procesando excusa de " + nombre + " (" + nivel + ") ---");
-                cadenaDeResponsabilidad.revisarExcusa(excusa);
-
-                txtConsola.append("\nResultado: " + (excusa.isAceptada() ? "ACEPTADA" : "RECHAZADA") + "\n");
+                txtConsola.append("\nResultado: " + (excusa.isAceptada() ? "ACEPTADA" : excusa.getRespuestaFinal()) + "\n");
                 txtConsola.append("-------------------------------------------\n");
-
             } catch (NumberFormatException ex) {
                 JOptionPane.showMessageDialog(frame, "El legajo debe ser un numero.", "Error", JOptionPane.ERROR_MESSAGE);
             }
@@ -138,39 +107,34 @@ public class Main {
 
         btnVerEstados.addActionListener(e -> {
             txtConsola.append("\n--- ESTADOS ACTUALES DEL PERSONAL ---\n");
-            txtConsola.append("Recepcionista: " + recepcionista.getModo().getClass().getSimpleName() + "\n");
-            txtConsola.append("Supervisora: " + supervisora.getModo().getClass().getSimpleName() + "\n");
-            txtConsola.append("Gerente HR: " + gerente.getModo().getClass().getSimpleName() + "\n");
-            txtConsola.append("CEO: " + ceo.getModo().getClass().getSimpleName() + "\n");
+            encargados.forEach(enc -> txtConsola.append(enc + ": " + nombreModo(enc) + "\n"));
             txtConsola.append("-------------------------------------\n");
         });
 
         btnTomarCafe.addActionListener(e -> {
-            Empleado seleccionado = (Empleado) comboEmpleados.getSelectedItem();
+            Encargado seleccionado = (Encargado) comboEncargados.getSelectedItem();
             if (seleccionado != null) {
-                seleccionado.getModo().tomarCafe(seleccionado);
-                txtConsola.append("\n[*] " + seleccionado.getClass().getSimpleName() + " tomó un café. Ahora está Productivo.\n");
+                seleccionado.tomarCafe();
+                txtConsola.append("\n[*] " + seleccionado + " tomó un café. Ahora está " + nombreModo(seleccionado) + ".\n");
             }
         });
 
         btnDescanso.addActionListener(e -> {
-            Empleado seleccionado = (Empleado) comboEmpleados.getSelectedItem();
+            Encargado seleccionado = (Encargado) comboEncargados.getSelectedItem();
             if (seleccionado != null) {
-                seleccionado.getModo().tomarDescanso(seleccionado, 12);
-                txtConsola.append("\n[*] " + seleccionado.getClass().getSimpleName() + " tomó un break. Ahora está Normal.\n");
+                int minutos = (Integer) spnMinutos.getValue();
+                Object antes = seleccionado.getModo();
+                seleccionado.tomarDescanso(minutos);
+                String efecto = seleccionado.getModo() == antes
+                        ? "Sin efecto (fuera de 10-15 min)."
+                        : "Ahora está " + nombreModo(seleccionado) + ".";
+                txtConsola.append("\n[*] " + seleccionado + " tomó un break de " + minutos + " min. " + efecto + "\n");
             }
         });
 
         btnDiaSiguiente.addActionListener(e -> {
             txtConsola.append("\n[*] --- COMIENZA UN NUEVO DÍA LABORAL ---\n");
-            Empleado actual = (Empleado) cadenaDeResponsabilidad;
-
-            while (actual != null) {
-                if (actual.getModo() instanceof ModoVago) {
-                    ((ModoVago) actual.getModo()).alDiaSiguiente(actual);
-                }
-                actual = (Empleado) actual.getSiguiente();
-            }
+            encargados.forEach(Encargado::comenzarNuevoDia);
         });
 
         frame.setVisible(true);

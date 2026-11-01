@@ -1,20 +1,11 @@
 package com.excusas.state;
 
-import com.excusas.model.Empleado;
+import com.excusas.chain.Encargado;
 import com.excusas.model.Excusa;
 
 public interface Estado {
-    void manejarExcusa(Empleado empleado, Excusa excusa);
+    void manejarExcusa(Encargado encargado, Excusa excusa);
 
-    default void tomarCafe(Empleado empleado) {
-        empleado.setModo(new ModoProductivo());
-        empleado.reiniciarContador();
-    }
-
-    default void tomarDescanso(Empleado empleado, int minutos) {
-        if (minutos >= 10 && minutos <= 15) {
-            empleado.setModo(new ModoNormal());
-            empleado.setCantidadExcusas(6);
-        }
-    }
+    /** Por defecto un nuevo día no cambia el modo; ModoVago lo redefine. */
+    default void alNuevoDia(Encargado encargado) { }
 }

@@ -1,26 +1,30 @@
 package com.excusas.model;
 
-public class Excusa {
-    private Empleado empleado;
-    private NivelComplejidad nivel;
-    private String descripcion;
+import java.util.Set;
+
+public abstract class Excusa {
+    public static final String MENSAJE_RECHAZO = "Excusa rechazada: necesitamos pruebas contundentes";
+
+    private final Empleado empleado;
+    private final Motivo motivo;
     private boolean aceptada;
     private String respuestaFinal;
 
-    public Excusa(Empleado empleado, NivelComplejidad nivel, String descripcion) {
+    protected Excusa(Empleado empleado, Motivo motivo) {
+        if (!motivosValidos().contains(motivo)) {
+            throw new IllegalArgumentException(motivo + " no es un motivo de " + getClass().getSimpleName());
+        }
         this.empleado = empleado;
-        this.nivel = nivel;
-        this.descripcion = descripcion;
-        this.aceptada = false;
+        this.motivo = motivo;
     }
 
+    protected abstract Set<Motivo> motivosValidos();
+
+    public void aceptar() { this.aceptada = true; }
+    public void rechazarPorFaltaDePruebas() { this.aceptada = false; this.respuestaFinal = MENSAJE_RECHAZO; }
+
     public Empleado getEmpleado() { return empleado; }
-    public NivelComplejidad getNivel() { return nivel; }
-    public String getDescripcion() { return descripcion; }
-
+    public Motivo getMotivo() { return motivo; }
     public boolean isAceptada() { return aceptada; }
-    public void setAceptada(boolean aceptada) { this.aceptada = aceptada; }
-
     public String getRespuestaFinal() { return respuestaFinal; }
-    public void setRespuestaFinal(String respuestaFinal) { this.respuestaFinal = respuestaFinal; }
 }

@@ -1,24 +1,20 @@
 package com.excusas.chain;
 
-import com.excusas.model.Empleado;
-
 public class CadenaBuilder {
+    private Responsable primero;
+    private EslabonDeCadena ultimo;
 
-    private Empleado primerEslabon;
-    private Empleado ultimoEslabon;
-
-    public CadenaBuilder agregarResponsable(Empleado responsable) {
-        if (primerEslabon == null) {
-            primerEslabon = responsable;
-            ultimoEslabon = responsable;
+    public CadenaBuilder agregarResponsable(EslabonDeCadena responsable) {
+        if (primero == null) {
+            primero = responsable;
         } else {
-            ultimoEslabon.setSiguiente(responsable);
-            ultimoEslabon = responsable;
+            ultimo.setSiguiente(responsable);
         }
+        ultimo = responsable;
         return this;
     }
 
-    public Empleado construir() {
-        return primerEslabon;
+    public Responsable construir() {
+        return primero;
     }
 }

@@ -1,43 +1,35 @@
 package com.excusas.service;
 
 import com.excusas.model.Excusa;
-import java.util.ArrayList;
+import com.excusas.model.Prontuario;
+import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
-public class AdministradorProntuarios {
-    private static AdministradorProntuarios instancia;
+public class AdministradorProntuarios implements RegistroDeProntuarios {
+    private static final AdministradorProntuarios INSTANCIA = new AdministradorProntuarios();
 
-    private List<DirectivoObserver> observadores;
-    private List<Excusa> prontuarios;
+    private final List<DirectivoObserver> observadores = new CopyOnWriteArrayList<>();
+    private final List<Prontuario> prontuarios = new CopyOnWriteArrayList<>();
 
-    private AdministradorProntuarios() {
-        observadores = new ArrayList<>();
-        prontuarios = new ArrayList<>();
-    }
+    private AdministradorProntuarios() { }
 
     public static AdministradorProntuarios getInstance() {
-        if (instancia == null) {
-            instancia = new AdministradorProntuarios();
-        }
-        return instancia;
+        return INSTANCIA;
     }
 
     public void agregarObservador(DirectivoObserver observador) {
         observadores.add(observador);
     }
 
+    @Override
     public void registrarProntuario(Excusa excusa) {
-        prontuarios.add(excusa);
-        notificarObservadores(excusa);
+        Prontuario prontuario = new Prontuario(excusa);
+        prontuarios.add(prontuario);
+        observadores.forEach(obs -> obs.actualizar(prontuario));
     }
 
-    private void notificarObservadores(Excusa excusa) {
-        for (DirectivoObserver obs : observadores) {
-            obs.actualizar(excusa);
-        }
-    }
-
-    public List<DirectivoObserver> getObservadores() {
-        return observadores;
+    public List<Prontuario> getProntuarios() {
+        return Collections.unmodifiableList(prontuarios);
     }
 }

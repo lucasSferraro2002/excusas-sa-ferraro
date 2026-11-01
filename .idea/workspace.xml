@@ -5,35 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d59b6c6-13b8-4dce-bb10-4b418def1c20" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/CadenaBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/EmpleadoComun.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/NivelComplejidad.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/Estado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/CadenaBuilderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/ReglasDeNegocioTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/excusas/model/EstadoEmpleadoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/chain/CEO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/CEO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/chain/CadenaBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/CadenaBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/chain/GerenteHR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/GerenteHR.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/chain/Recepcionista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/Recepcionista.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/chain/SupervisoraArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/SupervisoraArea.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/Empleado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/EmpleadoComun.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/Excusa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/Excusa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/Motivo.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/service/AdministradorProntuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/service/AdministradorProntuarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoDesempeno.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/service/DirectivoObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/service/DirectivoObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/state/Estado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/Estado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoNormal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoProductivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoProductivo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoVago.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoVago.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/excusas/chain/CEOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/GerenteYCEOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/excusas/chain/GerenteHRTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/excusas/chain/CadenaBuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/CadenaBuilderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/excusas/chain/GerenteYCEOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/GerenteYCEOTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/excusas/chain/RecepcionistaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/RecepcionistaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/excusas/chain/SupervisoraAreaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/excusas/chain/SupervisoraAreaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/excusas/model/EmpleadoStateTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/excusas/model/EstadoEmpleadoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/excusas/model/EstadoEmpleadoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/excusas/service/AdministradorProntuariosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/excusas/service/AdministradorProntuariosTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -284,7 +276,7 @@
       <updated>1792980509221</updated>
       <workItem from="1792980512020" duration="4364000" />
       <workItem from="1793458831856" duration="10246000" />
-      <workItem from="1793503968980" duration="5508000" />
+      <workItem from="1793503968980" duration="7652000" />
     </task>
     <servers />
   </component>

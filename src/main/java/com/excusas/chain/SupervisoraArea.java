@@ -1,29 +1,31 @@
 package com.excusas.chain;
 
-import com.excusas.model.Empleado;
 import com.excusas.model.Excusa;
-import com.excusas.model.NivelComplejidad;
+import com.excusas.model.ExcusaModerada;
+import com.excusas.model.Motivo;
+import com.excusas.service.Contactos;
 import com.excusas.service.EmailSender;
 
-public class SupervisoraArea extends Empleado {
+public class SupervisoraArea extends Encargado {
+    private static final String ASUNTO_EDESUR = "Verificación de servicio";
+    private static final String CUERPO_EDESUR = "¿Me confirman si hubo un corte de luz en el barrio del empleado?";
+    private static final String ASUNTO_FAMILIAR = "Consulta personal";
+    private static final String CUERPO_FAMILIAR = "¿Está todo bien con tu familiar?";
+
     public SupervisoraArea(String nombre, String email, int legajo, EmailSender emailSender) {
         super(nombre, email, legajo, emailSender);
     }
 
     @Override
-    protected NivelComplejidad getNivelAsignado() { return NivelComplejidad.MODERADA; }
+    protected boolean puedeProcesar(Excusa excusa) { return excusa instanceof ExcusaModerada; }
 
     @Override
     protected void procesarExcusaEspecifica(Excusa excusa) {
-        excusa.setAceptada(true);
-        String texto = excusa.getDescripcion().toLowerCase();
-
-        if (texto.contains("corto la luz")) {
-            getEmailSender().enviarEmail("EDESUR@mailfake.com.ar", getEmail(), "Verificación de servicio", "¿Me confirman si hubo un corte de luz en el barrio del empleado?");
-        } else if (texto.contains("cuidar a un familiar")) {
-            getEmailSender().enviarEmail(excusa.getEmpleado().getEmail(), getEmail(), "Consulta personal", "¿Está todo bien con tu familiar?");
+        excusa.aceptar();
+        if (excusa.getMotivo() == Motivo.PERDIDA_SUMINISTRO) {
+            enviarEmail(Contactos.EMAIL_EDESUR, ASUNTO_EDESUR, CUERPO_EDESUR);
         } else {
-            getEmailSender().enviarEmail(excusa.getEmpleado().getEmail(), getEmail(), "Excusa moderada", "Tu excusa ha sido evaluada y aceptada.");
+            enviarEmail(excusa.getEmpleado().getEmail(), ASUNTO_FAMILIAR, CUERPO_FAMILIAR);
         }
     }
 }

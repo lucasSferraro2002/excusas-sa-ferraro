@@ -1,7 +1,6 @@
 package com.excusas.chain;
 
 import com.excusas.model.Empleado;
-import com.excusas.model.EmpleadoComun;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
