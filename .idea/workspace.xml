@@ -6,18 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9d59b6c6-13b8-4dce-bb10-4b418def1c20" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/chain/CEO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/CEO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/chain/Encargado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/Encargado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/chain/GerenteHR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/GerenteHR.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/chain/Recepcionista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/Recepcionista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/chain/SupervisoraArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/SupervisoraArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/Excusa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/Excusa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/ExcusaCompleja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/ExcusaCompleja.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/ExcusaInverosimil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/ExcusaInverosimil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/ExcusaModerada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/ExcusaModerada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/ExcusaTrivial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/ExcusaTrivial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/excusas/CadenaExcusasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/excusas/CadenaExcusasTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/NivelComplejidad.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/state/PoliticaPorCantidad.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,23 +37,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0000000000083782" />
-      <entry key="S10" value="1.000005108846402" />
-      <entry key="S30" value="1.0458668136106473" />
-      <entry key="S60" value="1.4732266994991345" />
-      <entry key="M2" value="2.6138839085291363" />
-      <entry key="M5" value="5.189741754579255" />
-      <entry key="M10" value="7.4849989159569645" />
-      <entry key="M15" value="8.653664190621168" />
-      <entry key="M30" value="10.284748685303269" />
-      <entry key="H1" value="12.37823534442959" />
-      <entry key="H2" value="15.53505879537538" />
-      <entry key="H4" value="18.703721509648652" />
-      <entry key="D1" value="22.914392526431023" />
-      <entry key="W1" value="23.83901175289109" />
+      <entry key="MS100" value="1.0123443954978653" />
+      <entry key="MS500" value="1.415235012045447" />
+      <entry key="S2" value="1.8027373887159535" />
+      <entry key="S5" value="1.9158606428701233" />
+      <entry key="S10" value="1.957010972177986" />
+      <entry key="S30" value="2.030658087246133" />
+      <entry key="S60" value="2.4624758302883554" />
+      <entry key="M2" value="3.6043290383695545" />
+      <entry key="M5" value="6.182145121291001" />
+      <entry key="M10" value="8.479518718890901" />
+      <entry key="M15" value="9.649439779059666" />
+      <entry key="M30" value="11.282238054320091" />
+      <entry key="H1" value="13.376724414073692" />
+      <entry key="H2" value="16.534110634850656" />
+      <entry key="H4" value="19.703150723234607" />
+      <entry key="D1" value="23.914275977519925" />
+      <entry key="W1" value="24.838994431170597" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -85,23 +75,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.716160193628449E-6" />
-      <entry key="MS500" value="0.0770532703414879" />
-      <entry key="S2" value="0.5268630831697736" />
-      <entry key="S5" value="0.773889773245117" />
-      <entry key="S10" value="0.8797146313546612" />
-      <entry key="S30" value="1.0019989226948762" />
-      <entry key="S60" value="1.4408582949038462" />
-      <entry key="M2" value="2.5844773585618994" />
-      <entry key="M5" value="5.169920688292294" />
-      <entry key="M10" value="7.472939281653188" />
-      <entry key="M15" value="8.645059879581037" />
-      <entry key="M30" value="10.28005084802149" />
-      <entry key="H1" value="12.375470835253493" />
-      <entry key="H2" value="15.533297795094294" />
-      <entry key="H4" value="18.7026444097612" />
-      <entry key="D1" value="22.91416922438947" />
-      <entry key="W1" value="23.838978479471848" />
+      <entry key="MS100" value="0.012344429027220934" />
+      <entry key="MS500" value="0.44723022768383586" />
+      <entry key="S2" value="1.2256700843104937" />
+      <entry key="S5" value="1.6246358280913984" />
+      <entry key="S10" value="1.7988983364746156" />
+      <entry key="S30" value="1.972886368972855" />
+      <entry key="S60" value="2.4230461358522364" />
+      <entry key="M2" value="3.571374551800182" />
+      <entry key="M5" value="6.160889289987125" />
+      <entry key="M10" value="8.46673575677448" />
+      <entry key="M15" value="9.640351503849189" />
+      <entry key="M30" value="11.277297251796886" />
+      <entry key="H1" value="13.373838178873395" />
+      <entry key="H2" value="16.53228870845231" />
+      <entry key="H4" value="19.702043138952924" />
+      <entry key="D1" value="23.914047590338743" />
+      <entry key="W1" value="24.83896043116318" />
     </decayedShown>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
@@ -117,56 +107,57 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AdministradorProntuariosTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CEOTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.EmpleadoStateTest.empleadoPasaAModoProductivoAlTomarCafe.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.EmpleadoStateTest.empleadoPasaAModoVagoAlTomarDescanso.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.EmpleadoStateTest.empleadoProductivoBajaANormalAlTomarDescanso.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.EmpleadoStateTest.empleadoProductivoSeMantieneProductivoSiTomaMasCafe.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.EmpleadoStateTest.empleadoVagoSubeANormalAlTomarCafe.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.EmpleadoStateTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenteHRTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenteHRTest.gerenteAceptaExcusaIrrelevanteOCompleja.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RecepcionistaTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RecepcionistaTest.recepcionistaAceptaExcusaQuedarseDormidoYEnviaEmail.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RecepcionistaTest.recepcionistaDerivaExcusaASiguienteResponsable.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ReglasDeNegocioTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SupervisoraAreaTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SupervisoraAreaTest.supervisoraAceptaCorteDeLuzYEnviaEmailAEdesur.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.com.excusas in excusas-sa-ferraro.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "JUnit.AdministradorProntuariosTest.executor": "Run",
+    "JUnit.All in excusas-sa-ferraro.executor": "Run",
+    "JUnit.CEOTest.executor": "Run",
+    "JUnit.EmpleadoStateTest.empleadoPasaAModoProductivoAlTomarCafe.executor": "Run",
+    "JUnit.EmpleadoStateTest.empleadoPasaAModoVagoAlTomarDescanso.executor": "Run",
+    "JUnit.EmpleadoStateTest.empleadoProductivoBajaANormalAlTomarDescanso.executor": "Run",
+    "JUnit.EmpleadoStateTest.empleadoProductivoSeMantieneProductivoSiTomaMasCafe.executor": "Run",
+    "JUnit.EmpleadoStateTest.empleadoVagoSubeANormalAlTomarCafe.executor": "Run",
+    "JUnit.EmpleadoStateTest.executor": "Run",
+    "JUnit.GerenteHRTest.executor": "Run",
+    "JUnit.GerenteHRTest.gerenteAceptaExcusaIrrelevanteOCompleja.executor": "Run",
+    "JUnit.RecepcionistaTest.executor": "Run",
+    "JUnit.RecepcionistaTest.recepcionistaAceptaExcusaQuedarseDormidoYEnviaEmail.executor": "Run",
+    "JUnit.RecepcionistaTest.recepcionistaDerivaExcusaASiguienteResponsable.executor": "Run",
+    "JUnit.ReglasDeNegocioTest.executor": "Run",
+    "JUnit.SupervisoraAreaTest.executor": "Run",
+    "JUnit.SupervisoraAreaTest.supervisoraAceptaCorteDeLuzYEnviaEmailAEdesur.executor": "Run",
+    "JUnit.com.excusas in excusas-sa-ferraro.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.excusas.chain" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in excusas-sa-ferraro">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.excusas.Main" />
       <module name="excusas-sa-ferraro" />
@@ -184,22 +175,6 @@
       <module name="excusas-sa-ferraro" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EmpleadoStateTest.empleadoProductivoSeMantieneProductivoSiTomaMasCafe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="excusas-sa-ferraro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.excusas.state.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.excusas.model" />
-      <option name="MAIN_CLASS_NAME" value="com.excusas.model.EmpleadoStateTest" />
-      <option name="METHOD_NAME" value="empleadoProductivoSeMantieneProductivoSiTomaMasCafe" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -233,13 +208,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Python tests in test" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="excusas-sa-ferraro" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/src/test&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in excusas-sa-ferraro" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.All in excusas-sa-ferraro" />
+        <item itemvalue="Python tests.Python tests in test" />
         <item itemvalue="JUnit.com.excusas in excusas-sa-ferraro" />
         <item itemvalue="JUnit.ReglasDeNegocioTest" />
-        <item itemvalue="JUnit.EmpleadoStateTest.empleadoProductivoSeMantieneProductivoSiTomaMasCafe" />
       </list>
     </recent_temporary>
   </component>
@@ -260,7 +252,7 @@
       <workItem from="1792980512020" duration="4364000" />
       <workItem from="1793458831856" duration="10246000" />
       <workItem from="1793503968980" duration="7652000" />
-      <workItem from="1793544250398" duration="688000" />
+      <workItem from="1793544250398" duration="1760000" />
     </task>
     <servers />
   </component>

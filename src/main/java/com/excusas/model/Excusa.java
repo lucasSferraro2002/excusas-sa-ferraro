@@ -7,15 +7,17 @@ public abstract class Excusa {
 
     private final Empleado empleado;
     private final Motivo motivo;
+    private final String descripcion;
     private boolean aceptada;
     private String respuestaFinal;
 
-    protected Excusa(Empleado empleado, Motivo motivo) {
+    protected Excusa(Empleado empleado, Motivo motivo, String descripcion) {
         if (!motivosValidos().contains(motivo)) {
             throw new IllegalArgumentException(motivo + " no es un motivo de " + getClass().getSimpleName());
         }
         this.empleado = empleado;
         this.motivo = motivo;
+        this.descripcion = descripcion == null ? "" : descripcion;
     }
 
     protected abstract Set<Motivo> motivosValidos();
@@ -27,6 +29,7 @@ public abstract class Excusa {
 
     public Empleado getEmpleado() { return empleado; }
     public Motivo getMotivo() { return motivo; }
+    public String getDescripcion() { return descripcion; }
     public boolean isAceptada() { return aceptada; }
     public String getRespuestaFinal() { return respuestaFinal; }
 }

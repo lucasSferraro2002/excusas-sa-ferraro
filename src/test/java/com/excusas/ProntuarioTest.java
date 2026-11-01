@@ -74,4 +74,15 @@ class ProntuarioTest {
         verify(sender).enviarEmail(Contactos.EMAIL_DIRECCION, Contactos.EMAIL_PRONTUARIOS,
                 "Nuevo prontuario", "Se registró un prontuario para el legajo 7");
     }
+
+    @Test
+    void elProntuarioConservaLaExcusaEscritaPorElEmpleado() {
+        Excusa excusa = Motivo.INVEROSIMIL.nuevaExcusa(empleado, "Una paloma robó mi bicicleta");
+
+        nuevoCeo().revisarExcusa(excusa);
+
+        List<Prontuario> prontuarios = admin.getProntuarios();
+        Prontuario ultimo = prontuarios.get(prontuarios.size() - 1);
+        assertEquals("Una paloma robó mi bicicleta", ultimo.getExcusa().getDescripcion());
+    }
 }

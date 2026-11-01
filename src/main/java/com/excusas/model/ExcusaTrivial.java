@@ -4,7 +4,9 @@ import java.util.EnumSet;
 import java.util.Set;
 
 public class ExcusaTrivial extends Excusa {
-    public ExcusaTrivial(Empleado empleado, Motivo motivo) { super(empleado, motivo); }
+    public ExcusaTrivial(Empleado empleado, Motivo motivo) { this(empleado, motivo, ""); }
+
+    public ExcusaTrivial(Empleado empleado, Motivo motivo, String descripcion) { super(empleado, motivo, descripcion); }
 
     @Override
     protected Set<Motivo> motivosValidos() { return EnumSet.of(Motivo.QUEDARSE_DORMIDO, Motivo.PERDER_TRANSPORTE); }

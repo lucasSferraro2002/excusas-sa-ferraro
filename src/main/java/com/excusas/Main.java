@@ -23,7 +23,7 @@ public class Main {
         frame.setSize(750, 750);
         frame.setLayout(new BorderLayout());
 
-        JPanel panelFormulario = new JPanel(new GridLayout(4, 2, 10, 10));
+        JPanel panelFormulario = new JPanel(new GridLayout(5, 2, 10, 10));
         panelFormulario.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         panelFormulario.add(new JLabel("Nombre del empleado:"));
@@ -37,6 +37,19 @@ public class Main {
         panelFormulario.add(new JLabel("Motivo:"));
         JComboBox<Motivo> comboMotivo = new JComboBox<>(Motivo.values());
         panelFormulario.add(comboMotivo);
+
+        panelFormulario.add(new JLabel("Excusa del empleado:"));
+        JTextField txtDescripcion = new JTextField();
+        panelFormulario.add(txtDescripcion);
+
+        comboMotivo.addActionListener(e -> {
+            boolean admite = ((Motivo) comboMotivo.getSelectedItem()).admiteDescripcion();
+            txtDescripcion.setEnabled(admite);
+            if (!admite) {
+                txtDescripcion.setText("");
+            }
+        });
+        txtDescripcion.setEnabled(((Motivo) comboMotivo.getSelectedItem()).admiteDescripcion());
 
         JButton btnProcesar = new JButton("Procesar Excusa");
         panelFormulario.add(new JLabel());
@@ -97,9 +110,15 @@ public class Main {
                 int legajo = Integer.parseInt(txtLegajo.getText());
                 Motivo motivo = (Motivo) comboMotivo.getSelectedItem();
                 Empleado empleado = new Empleado(nombre, nombre.toLowerCase() + "@excusas.com", legajo);
-                Excusa excusa = motivo.nuevaExcusa(empleado);
+                String descripcion = txtDescripcion.getText().trim();
+                if (motivo.admiteDescripcion() && descripcion.isEmpty()) {
+                    JOptionPane.showMessageDialog(frame, "Escribí la excusa que dio el empleado.", "Error", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+                Excusa excusa = motivo.nuevaExcusa(empleado, descripcion);
 
-                txtConsola.append("\n--- Procesando excusa de " + nombre + " (" + motivo + ") ---");
+                txtConsola.append("\n--- Procesando excusa de " + nombre + " (" + motivo + ")"
+                        + (descripcion.isEmpty() ? "" : ": \"" + descripcion + "\"") + " ---");
                 cadena.revisarExcusa(excusa);
 
                 txtConsola.append("\nResultado: " + (excusa.isAceptada() ? "ACEPTADA" : excusa.getRespuestaFinal()) + "\n");

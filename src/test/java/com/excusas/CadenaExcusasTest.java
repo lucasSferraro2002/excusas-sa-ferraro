@@ -197,4 +197,20 @@ class CadenaExcusasTest {
         assertFalse(excusa.isAceptada());
         verify(registro, never()).registrarProntuario(any());
     }
+
+    @Test
+    void lasExcusasAbiertasGuardanLoQueDijoElEmpleado() {
+        Excusa excusa = Motivo.INVEROSIMIL.nuevaExcusa(empleado, "Me abdujeron unos aliens");
+
+        assertEquals("Me abdujeron unos aliens", excusa.getDescripcion());
+        assertEquals("", Motivo.QUEDARSE_DORMIDO.nuevaExcusa(empleado).getDescripcion());
+    }
+
+    @Test
+    void soloIrrelevanteEInverosimilAdmitenDescripcion() {
+        for (Motivo motivo : Motivo.values()) {
+            boolean esperado = motivo == Motivo.IRRELEVANTE || motivo == Motivo.INVEROSIMIL;
+            assertEquals(esperado, motivo.admiteDescripcion(), motivo.name());
+        }
+    }
 }
