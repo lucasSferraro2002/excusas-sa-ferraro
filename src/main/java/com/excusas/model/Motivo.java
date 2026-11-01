@@ -21,7 +21,6 @@ public enum Motivo {
         this.admiteDescripcion = admiteDescripcion;
     }
 
-    /** Si el motivo es abierto: quien carga la excusa escribe lo que dijo el empleado. */
     public boolean admiteDescripcion() { return admiteDescripcion; }
 
     public Excusa nuevaExcusa(Empleado empleado) {

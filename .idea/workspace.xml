@@ -6,8 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="9d59b6c6-13b8-4dce-bb10-4b418def1c20" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/NivelComplejidad.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/state/PoliticaPorCantidad.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/chain/CEO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/CEO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/chain/GerenteHR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/GerenteHR.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/chain/SupervisoraArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/chain/SupervisoraArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/ExcusaCompleja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/ExcusaCompleja.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/Motivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/Motivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/model/NivelExcusa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/model/NivelExcusa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/service/Contactos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/service/Contactos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/state/Estado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/Estado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoProductivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/ModoProductivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/state/PoliticaDeModo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/PoliticaDeModo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/excusas/state/PoliticaEstandar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excusas/state/PoliticaEstandar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +261,7 @@
       <workItem from="1792980512020" duration="4364000" />
       <workItem from="1793458831856" duration="10246000" />
       <workItem from="1793503968980" duration="7652000" />
-      <workItem from="1793544250398" duration="1760000" />
+      <workItem from="1793544250398" duration="3802000" />
     </task>
     <servers />
   </component>

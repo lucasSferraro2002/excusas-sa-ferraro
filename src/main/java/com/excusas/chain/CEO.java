@@ -5,7 +5,6 @@ import com.excusas.model.NivelExcusa;
 import com.excusas.service.EmailSender;
 import com.excusas.service.RegistroDeProntuarios;
 
-/** Solo escucha excusas inverosímiles (no toma las de niveles inferiores). */
 public class CEO extends Encargado {
     private static final String ASUNTO = "Resolución final";
     private static final String CUERPO = "Aprobado por creatividad";

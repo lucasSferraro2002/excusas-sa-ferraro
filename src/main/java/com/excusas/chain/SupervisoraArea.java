@@ -6,7 +6,6 @@ import com.excusas.model.NivelExcusa;
 import com.excusas.service.Contactos;
 import com.excusas.service.EmailSender;
 
-/** Acepta excusas triviales y moderadas; las triviales solo las acepta, sin acción propia. */
 public class SupervisoraArea extends Encargado {
     private static final String ASUNTO_EDESUR = "Verificación de servicio";
     private static final String CUERPO_EDESUR = "¿Me confirman si hubo un corte de luz en el barrio del empleado?";

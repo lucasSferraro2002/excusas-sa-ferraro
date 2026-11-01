@@ -4,12 +4,6 @@ import java.util.OptionalInt;
 import java.util.Random;
 import java.util.function.BooleanSupplier;
 
-/**
- * Menos de 5 excusas: Productivo. De 5 a 10: Normal. 11 o más: Vago.
- * (El enunciado no define el 5 exacto; se asigna a Normal.)
- * Café: vuelve a 0 (Productivo). Descanso de 10 a 15 min: pasa a Normal; fuera de ese rango, sin efecto.
- * Una noche: 50% Productivo / 50% Normal.
- */
 public class PoliticaEstandar implements PoliticaDeModo {
     private static final int PRIMER_CANTIDAD_NORMAL = 5;
     private static final int PRIMER_CANTIDAD_VAGO = 11;

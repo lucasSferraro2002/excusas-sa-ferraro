@@ -14,3 +14,5 @@ public class ExcusaCompleja extends Excusa {
     @Override
     public NivelExcusa getNivel() { return NivelExcusa.COMPLEJA; }
 }
+
+
